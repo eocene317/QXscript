@@ -27,6 +27,7 @@ function sign_task() {
 				$.desc = `签到失败: ${obj.message}`;
 			}
 		}
+		$.setdata(JSON.stringify(response.headers), 'headers_' + suffix);
 		$.msg($.name, '', $.desc);
 		$.done({});
 	}) // 不支持异步
